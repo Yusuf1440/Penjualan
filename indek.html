@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1440 Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-gem"></i>
+                <span>Store Diamond</span>
+            </div>
+            
+            <nav class="navbar">
+                <a href="#home" class="nav-link active">Beranda</a>
+                <a href="#products" class="nav-link">Diamond</a>
+                <a href="#testimonial" class="nav-link">Testimoni</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contact" class="nav-link">Kontak</a>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="user-menu">
+                    <button class="user-btn">
+                        <i class="fas fa-user"></i>
+                        <span>Login</span>
+                    </button>
+                </div>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Top Up Diamond Mobile Legends</h1>
+                    <p class="hero-subtitle">Murah, Cepat, dan Terpercaya</p>
+                    <p class="hero-description">
+                        Dapatkan diamond ML dengan harga terbaik. Proses instan, diamond langsung masuk ke akun Anda dalam hitungan menit!
+                    </p>
+                    <div class="hero-features">
+                        <div class="feature">
+                            <i class="fas fa-bolt"></i>
+                            <span>Proses Instan</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>100% Aman</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-headset"></i>
+                            <span>Support 24/7</span>
+                        </div>
+                    </div>
+                    <button class="cta-button" onclick="scrollToProducts()">
+                        <i class="fas fa-shopping-bag"></i>
+                        Beli Diamond Sekarang
+                    </button>
+                </div>
+                <div class="hero-image">
+                    <img src="mlbb.jpg" alt="Mobile Legends" class="hero-img">
+                    <div class="floating-card">
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Paket Diamond</h2>
+                <p class="section-subtitle">Pilih paket diamond yang sesuai dengan kebutuhan Anda</p>
+            </div>
+            
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Order -->
+    <section class="how-to-order">
+        <div class="container">
+            <h2 class="section-title">Cara Order</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-user-circle"></i>
+                    <h3>Login/Register</h3>
+                    <p>Masuk atau daftar akun untuk memulai pembelian</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Pilih Produk</h3>
+                    <p>Pilih paket diamond yang ingin dibeli</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-credit-card"></i>
+                    <h3>Pembayaran</h3>
+                    <p>Pilih metode pembayaran yang tersedia</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <i class="fas fa-gem"></i>
+                    <h3>Diamond Masuk</h3>
+                    <p>Diamond akan langsung masuk ke akun ML Anda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial" id="testimonial">
+        <div class="container">
+            <h2 class="section-title">Testimoni Pelanggan</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Prosesnya cepat banget, ga sampe 5 menit diamond langsung masuk. Recommended!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&h=100&fit=crop&crop=face" alt="User">
+                        <div>
+                            <h4>Rizki Pratama</h4>
+                            <span>5⭐ Rating</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Harganya murah dan customer service ramah. Sudah langganan di sini.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="orang.jpg" alt="User">
+                        <div>
+                            <h4>Wijaya</h4>
+                            <span>5⭐ Rating</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Pertama kali top up di sini dan sangat puas. Bakal balik lagi nih!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="User">
+                        <div>
+                            <h4>Andi Saputra</h4>
+                            <span>5⭐ Rating</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Pertanyaan Umum</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Berapa lama proses pengiriman diamond?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Biasanya diamond akan masuk dalam 1-5 menit setelah pembayaran berhasil. Maksimal 1 jam untuk proses verifikasi.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Apakah pembelian diamond di sini aman?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>100% aman! Kami menggunakan sistem pembayaran yang terpercaya dan data pelanggan kami jamin keamanannya.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Metode pembayaran apa saja yang tersedia?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kami menyediakan berbagai metode pembayaran: Transfer Bank, E-Wallet (Gopay, OVO, Dana), QRIS, dan Convenience Store.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Bagaimana jika diamond tidak masuk?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Segera hubungi customer service kami via live chat. Tim support kami siap membantu 24 jam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Butuh Bantuan?</h2>
+                    <p>Tim customer service kami siap membantu Anda 24 jam sehari, 7 hari seminggu.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h3>WhatsApp</h3>
+                                <p>+62 812-3456-7890</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>wijaya@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-telegram"></i>
+                            <div>
+                                <h3>Telegram</h3>
+                                <p>@mldiamondstore</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Kirim Pesan</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Nama Anda" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Anda" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Pesan Anda" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-gem"></i>
+                        <span>MLDiamondStore</span>
+                    </div>
+                    <p>Toko diamond Mobile Legends terpercaya dengan pelayanan terbaik dan harga kompetitif.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Layanan</h3>
+                    <ul>
+                        <li><a href="#">Top Up Diamond</a></li>
+                        <li><a href="#">Starlight Member</a></li>
+                        <li><a href="#">Twilight Pass</a></li>
+                        <li><a href="#">Skin Premium</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Bantuan</h3>
+                    <ul>
+                        <li><a href="#">Cara Order</a></li>
+                        <li><a href="#">Metode Pembayaran</a></li>
+                        <li><a href="#">Status Order</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Pembayaran</h3>
+                    <div class="payment-methods">
+                        <div class="payment-method">
+                            <i class="fas fa-university"></i>
+                            <span>Transfer Bank</span>
+                        </div>
+                        <div class="payment-method">
+                            <i class="fas fa-wallet"></i>
+                            <span>E-Wallet</span>
+                        </div>
+                        <div class="payment-method">
+                            <i class="fas fa-qrcode"></i>
+                            <span>QRIS</span>
+                        </div>
+                        <div class="payment-method">
+                            <i class="fas fa-store"></i>
+                            <span>Alfamart</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MLDiamondStore. All rights reserved. Mobile Legends is a trademark of Moonton.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Checkout Diamond</h2>
+                <button class="close-modal" id="closeCheckout">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="checkout-content">
+                    <div class="order-summary">
+                        <h3>Ringkasan Pesanan</h3>
+                        <div class="order-item" id="modalOrderItem">
+                            <!-- Order item will be populated -->
+                        </div>
+                        <div class="order-total">
+                            <span>Total:</span>
+                            <span id="modalTotalPrice">Rp 0</span>
+                        </div>
+                    </div>
+                    
+                    <form class="checkout-form" id="checkoutForm">
+                        <div class="form-section">
+                            <h3>Data Akun ML</h3>
+                            <div class="form-group">
+                                <label>ID Mobile Legends</label>
+                                <input type="text" id="mlId" placeholder="Masukkan ID ML" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Server ID</label>
+                                <input type="text" id="serverId" placeholder="Masukkan Server ID" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Nickname</label>
+                                <input type="text" id="nickname" placeholder="Masukkan Nickname" required>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Metode Pembayaran</h3>
+                            <div class="payment-options">
+                                <div class="payment-option">
+                                    <input type="radio" name="payment" value="transfer" id="transfer" checked>
+                                    <label for="transfer">
+                                        <i class="fas fa-university"></i>
+                                        <span>Transfer Bank</span>
+                                    </label>
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" name="payment" value="ewallet" id="ewallet">
+                                    <label for="ewallet">
+                                        <i class="fas fa-wallet"></i>
+                                        <span>E-Wallet</span>
+                                    </label>
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" name="payment" value="qris" id="qris">
+                                    <label for="qris">
+                                        <i class="fas fa-qrcode"></i>
+                                        <span>QRIS</span>
+                                    </label>
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" name="payment" value="alfamart" id="alfamart">
+                                    <label for="alfamart">
+                                        <i class="fas fa-store"></i>
+                                        <span>Alfamart</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Payment Details -->
+                            <div class="payment-details" id="paymentDetails">
+                                <div class="bank-details">
+                                    <h4>Transfer Bank</h4>
+                                    <div class="bank-account">
+                                        <strong>BCA - 1234567890</strong>
+                                        <p>a.n ML Diamond Store</p>
+                                    </div>
+                                    <div class="bank-account">
+                                        <strong>Mandiri - 0987654321</strong>
+                                        <p>a.n ML Diamond Store</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="pay-now-btn">
+                            <i class="fas fa-lock"></i>
+                            Bayar Sekarang
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal success-modal" id="successModal">
+        <div class="modal-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Pembayaran Berhasil!</h2>
+            <p>Terima kasih telah berbelanja di MLDiamondStore</p>
+            <div class="order-details">
+                <div class="detail-item">
+                    <span>Order ID:</span>
+                    <strong id="successOrderId">ML20240001</strong>
+                </div>
+                <div class="detail-item">
+                    <span>Produk:</span>
+                    <strong id="successProduct">86 Diamond</strong>
+                </div>
+                <div class="detail-item">
+                    <span>Total:</span>
+                    <strong id="successTotal">Rp 20.000</strong>
+                </div>
+                <div class="detail-item">
+                    <span>Status:</span>
+                    <strong class="status-processing">Diproses</strong>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-primary" onclick="closeSuccessModal()">Tutup</button>
+                <button class="btn btn-secondary" onclick="trackOrder()">Lacak Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Memproses pembayaran...</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Data produk diamond ML
+        const diamondProducts = [
+            { id: 1, name: "86 Diamond", diamond: "86", price: 20000, originalPrice: 25000, discount: "20%", popular: false },
+            { id: 2, name: "172 Diamond", diamond: "172", price: 40000, originalPrice: 50000, discount: "20%", popular: false },
+            { id: 3, name: "257 Diamond", diamond: "257", price: 60000, originalPrice: 75000, discount: "20%", popular: false },
+            { id: 4, name: "344 Diamond", diamond: "344", price: 80000, originalPrice: 100000, discount: "20%", popular: true },
+            { id: 5, name: "429 Diamond", diamond: "429", price: 100000, originalPrice: 125000, discount: "20%", popular: false },
+            { id: 6, name: "514 Diamond", diamond: "514", price: 120000, originalPrice: 150000, discount: "20%", popular: false },
+            { id: 7, name: "706 Diamond", diamond: "706", price: 150000, originalPrice: 187500, discount: "20%", popular: true },
+            { id: 8, name: "Twilight Pass", diamond: "300 + Skin", price: 150000, originalPrice: 187500, discount: "20%", popular: true }
+        ];
+
+        // Initialize application
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Initializing ML Diamond Store...');
+            initApp();
+        });
+
+        function initApp() {
+            loadProducts();
+            setupEventListeners();
+            setupFAQ();
+            console.log('App initialized successfully');
+        }
+
+        function loadProducts() {
+            const productsGrid = document.getElementById('productsGrid');
+            console.log('Loading products...', productsGrid);
+            
+            if (!productsGrid) {
+                console.error('Products grid not found!');
+                return;
+            }
+            
+            productsGrid.innerHTML = diamondProducts.map(product => `
+                <div class="product-card ${product.popular ? 'popular' : ''}">
+                    ${product.popular ? '<div class="product-discount">POPULAR</div>' : ''}
+                    <div class="product-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="product-name">${product.name}</h3>
+                    <div class="product-diamond">${product.diamond}</div>
+                    <div class="product-price">Rp ${formatPrice(product.price)}</div>
+                    ${product.originalPrice ? `<div class="product-original-price">Rp ${formatPrice(product.originalPrice)}</div>` : ''}
+                    <button class="buy-button" onclick="openCheckoutModal(${product.id})">
+                        <i class="fas fa-shopping-cart"></i>
+                        Beli Sekarang
+                    </button>
+                </div>
+            `).join('');
+            
+            console.log('Products loaded successfully');
+        }
+
+        function setupEventListeners() {
+            console.log('Setting up event listeners...');
+            
+            // Menu toggle for mobile
+            const menuToggle = document.getElementById('menuToggle');
+            const navbar = document.querySelector('.navbar');
+            
+            if (menuToggle && navbar) {
+                menuToggle.addEventListener('click', function() {
+                    const isVisible = navbar.style.display === 'flex';
+                    navbar.style.display = isVisible ? 'none' : 'flex';
+                    console.log('Mobile menu toggled:', !isVisible);
+                });
+            }
+
+            // Close checkout modal
+            const closeCheckout = document.getElementById('closeCheckout');
+            const checkoutModal = document.getElementById('checkoutModal');
+            
+            if (closeCheckout && checkoutModal) {
+                closeCheckout.addEventListener('click', function() {
+                    checkoutModal.classList.remove('active');
+                    console.log('Checkout modal closed');
+                });
+            }
+
+            // Checkout form submission
+            const checkoutForm = document.getElementById('checkoutForm');
+            if (checkoutForm) {
+                checkoutForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    console.log('Checkout form submitted');
+                    processPayment();
+                });
+            }
+
+            // Payment method change
+            const paymentRadios = document.querySelectorAll('input[name="payment"]');
+            paymentRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    console.log('Payment method changed to:', this.value);
+                    updatePaymentDetails(this.value);
+                });
+            });
+
+            // Contact form submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    showNotification('Pesan berhasil dikirim! Kami akan membalas dalam 1x24 jam.', 'success');
+                    this.reset();
+                    console.log('Contact form submitted');
+                });
+            }
+
+            // Navigation smooth scroll
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                        
+                        // Update active nav link
+                        navLinks.forEach(l => l.classList.remove('active'));
+                        this.classList.add('active');
+                        
+                        console.log('Navigated to:', targetId);
+                    }
+                });
+            });
+
+            // Success modal buttons
+            const trackOrderBtn = document.getElementById('trackOrderBtn');
+            const backToHomeBtn = document.getElementById('backToHomeBtn');
+            
+            if (trackOrderBtn) {
+                trackOrderBtn.addEventListener('click', function() {
+                    showNotification('Fitur pelacakan pesanan akan segera hadir!', 'info');
+                });
+            }
+            
+            if (backToHomeBtn) {
+                backToHomeBtn.addEventListener('click', function() {
+                    window.location.href = 'index.html';
+                });
+            }
+
+            console.log('Event listeners setup completed');
+        }
+
+        function setupFAQ() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            console.log('Setting up FAQ items:', faqItems.length);
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', function() {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                    console.log('FAQ item toggled');
+                });
+            });
+        }
+
+        // Global function to open checkout modal
+        function openCheckoutModal(productId) {
+            console.log('Opening checkout modal for product:', productId);
+            
+            const product = diamondProducts.find(p => p.id === productId);
+            if (!product) {
+                console.error('Product not found:', productId);
+                return;
+            }
+
+            const modalOrderItem = document.getElementById('modalOrderItem');
+            const modalTotalPrice = document.getElementById('modalTotalPrice');
+            const checkoutModal = document.getElementById('checkoutModal');
+
+            if (!modalOrderItem || !modalTotalPrice || !checkoutModal) {
+                console.error('Modal elements not found');
+                return;
+            }
+
+            modalOrderItem.innerHTML = `
+                <div class="order-item">
+                    <div>
+                        <strong>${product.name}</strong>
+                        <p>${product.diamond} Diamond</p>
+                    </div>
+                    <div>Rp ${formatPrice(product.price)}</div>
+                </div>
+            `;
+            
+            modalTotalPrice.textContent = `Rp ${formatPrice(product.price)}`;
+            checkoutModal.classList.add('active');
+            
+            console.log('Checkout modal opened for:', product.name);
+        }
+
+        function updatePaymentDetails(paymentMethod) {
+            const paymentDetails = document.getElementById('paymentDetails');
+            if (!paymentDetails) return;
+            
+            console.log('Updating payment details for:', paymentMethod);
+            
+            switch(paymentMethod) {
+                case 'transfer':
+                    paymentDetails.innerHTML = `
+                        <div class="bank-details">
+                            <h4>Transfer Bank</h4>
+                            <div class="bank-account">
+                                <strong>BCA - 1234567890</strong>
+                                <p>a.n ML Diamond Store</p>
+                            </div>
+                            <div class="bank-account">
+                                <strong>Mandiri - 0987654321</strong>
+                                <p>a.n ML Diamond Store</p>
+                            </div>
+                            <div class="bank-account">
+                                <strong>BNI - 1122334455</strong>
+                                <p>a.n ML Diamond Store</p>
+                            </div>
+                        </div>
+                    `;
+                    break;
+                case 'ewallet':
+                    paymentDetails.innerHTML = `
+                        <div class="bank-details">
+                            <h4>E-Wallet</h4>
+                            <div class="bank-account">
+                                <strong>Gopay - 087742891817</strong>
+                                <p>a.n ML Diamond Store</p>
+                            </div>
+                            <div class="bank-account">
+                                <strong>OVO - 081234567890</strong>
+                                <p>a.n ML Diamond Store</p>
+                            </div>
+                            <div class="bank-account">
+                                <strong>Dana - 087742891817</strong>
+                                <p>a.n ML Diamond Store</p>
+                            </div>
+                        </div>
+                    `;
+                    break;
+                case 'qris':
+                    paymentDetails.innerHTML = `
+                        <div class="bank-details">
+                            <h4>QRIS</h4>
+                            <div style="text-align: center; padding: 1rem;">
+                                <div style="background: #f0f0f0; padding: 1rem; border-radius: 8px; display: inline-block;">
+                                    <div style="width: 150px; height: 150px; background: #ddd; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                                        <span style="color: #666;">QR Code</span>
+                                    </div>
+                                    <p style="color: #666; font-size: 0.875rem;">Scan QR code di atas untuk pembayaran</p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    break;
+                case 'alfamart':
+                    paymentDetails.innerHTML = `
+                        <div class="bank-details">
+                            <h4>Alfamart</h4>
+                            <div class="bank-account">
+                                <p>Tunjukkan kode berikut ke kasir Alfamart:</p>
+                                <div style="background: #ff6b6b; color: white; padding: 1rem; border-radius: 8px; text-align: center; margin-top: 1rem;">
+                                    <strong style="font-size: 1.5rem; letter-spacing: 2px;">ALFA${Math.random().toString(36).substr(2, 8).toUpperCase()}</strong>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    break;
+            }
+        }
+
+        function processPayment() {
+            console.log('Processing payment...');
+            
+            // Get form data
+            const mlId = document.getElementById('mlId')?.value;
+            const serverId = document.getElementById('serverId')?.value;
+            const nickname = document.getElementById('nickname')?.value;
+            
+            if (!mlId || !serverId || !nickname) {
+                showNotification('Harap lengkapi semua data akun ML', 'error');
+                return;
+            }
+
+            // Show loading
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) loadingOverlay.classList.add('active');
+
+            // Simulate payment processing
+            setTimeout(() => {
+                // Hide loading
+                if (loadingOverlay) loadingOverlay.classList.remove('active');
+                
+                // Hide checkout modal
+                const checkoutModal = document.getElementById('checkoutModal');
+                if (checkoutModal) checkoutModal.classList.remove('active');
+                
+                // Show success modal
+                const successModal = document.getElementById('successModal');
+                if (successModal) successModal.classList.add('active');
+                
+                // Show success notification
+                showNotification('Pembayaran berhasil! Diamond akan segera diproses.', 'success');
+                
+                console.log('Payment processed successfully');
+            }, 2000);
+        }
+
+        function closeSuccessModal() {
+            const successModal = document.getElementById('successModal');
+            if (successModal) successModal.classList.remove('active');
+        }
+
+        function trackOrder() {
+            showNotification('Fitur pelacakan order akan segera hadir!', 'info');
+            closeSuccessModal();
+        }
+
+        function scrollToProducts() {
+            const productsSection = document.getElementById('products');
+            if (productsSection) {
+                productsSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        function formatPrice(price) {
+            return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        function showNotification(message, type = 'info') {
+            // Remove existing notifications
+            const existingNotifications = document.querySelectorAll('.notification');
+            existingNotifications.forEach(notification => {
+                notification.remove();
+            });
+
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            
+            const icon = type === 'success' ? 'fa-check-circle' : 
+                         type === 'error' ? 'fa-exclamation-circle' : 'fa-info-circle';
+            const backgroundColor = type === 'success' ? '#34c759' : 
+                                   type === 'error' ? '#ff3b30' : '#007aff';
+            
+            notification.innerHTML = `
+                <div class="notification-content">
+                    <i class="fas ${icon}"></i>
+                    <span>${message}</span>
+                </div>
+                <button class="notification-close" onclick="this.parentElement.remove()">
+                    <i class="fas fa-times"></i>
+                </button>
+            `;
+
+            // Add styles
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: ${backgroundColor};
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 12px;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 1rem;
+                z-index: 4000;
+                animation: slideInRight 0.3s ease;
+                max-width: 400px;
+                min-width: 300px;
+            `;
+
+            document.body.appendChild(notification);
+
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.remove();
+                }
+            }, 5000);
+        }
+
+        // Close modals when clicking outside
+        document.addEventListener('click', function(e) {
+            const checkoutModal = document.getElementById('checkoutModal');
+            const successModal = document.getElementById('successModal');
+            
+            if (e.target === checkoutModal) {
+                checkoutModal.classList.remove('active');
+            }
+            
+            if (e.target === successModal) {
+                successModal.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
